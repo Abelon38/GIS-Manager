@@ -11,7 +11,8 @@ To install GIS-Manager, follow these steps:
 
 1. Install NodeJS on your server or where GIS-Manager will be installed.
 2. Clone the repository or download.
-3. Configure your file script.js and script_data.js and add your link to your QGIS-server WMS. For exempel change: 
+3. Install dependicies by runing npm install.
+4. Configure your file script.js and script_data.js and add your link to your QGIS-server WMS. For exempel change: 
   `http://localhost:12000/qgis/qgis_mapserv.fcgi.exe?map=/QGISM1.0/projects/${fileName}&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities`;
 To: 
 `http://YourGIS-server-Adress?map=/QGISM1.0/projects/${fileName}&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities`;
