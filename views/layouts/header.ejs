@@ -1,0 +1,25 @@
+<!-- *  * Copyright (c) [year] [copyright holder's name]
+ *
+ * This file is licensed under the GNU General Public License (GPL) version 3.
+ * You can obtain a copy of the license at https://www.gnu.org/licenses/gpl-3.0.html#license-text. */
+  -->
+  
+<header class="header">
+    <nav class="navbar" role="navigation" aria-label="dropdown navigation">
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="#">QGIS Server</a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="/qgis">QGIS-projects</a>
+          <a class="navbar-item" href="/geodata">Geodata</a>
+        </div>
+       
+      </div>
+      <div class="header-container">
+      <div style="position: fixed; right: 20px;">
+        <% if (user) { %>
+            <a class="button-min" href="/logout">Logout</a>
+          <% } %>
+    </div>
+</div>
+    </nav>
+  </header>

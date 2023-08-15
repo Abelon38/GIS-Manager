@@ -1,0 +1,138 @@
+/* * Copyright (c) [year] [copyright holder's name]
+ *
+ * This file is licensed under the GNU General Public License (GPL) version 3.
+ * You can obtain a copy of the license at https://www.gnu.org/licenses/gpl-3.0.html#license-text. */
+
+/* Estilo para la barra de encabezado */
+.header {
+  background-color: lightblue;
+  color: #fff;
+  padding: 5px;
+  position: fixed;
+  top: 5px;
+  width: 100%;
+  margin-bottom: 30px;
+  z-index: 9999;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  margin-left: 80%;
+}
+
+.logout-button {
+  margin-left: auto;
+}
+
+.header-title {
+  margin-right: 1rem;
+}
+
+/* Estilo para el cuerpo */
+.body {
+  background-color: #f3f3f3;
+  display: flex;
+  width: 100%;
+  height: 100vh; /* Ajusta la altura para ocupar todo el viewport */
+}
+
+.content {
+  text-align: left; /* Centra el texto a la izquierda */
+  padding-block: 50px;
+}
+.formulario-upload {
+  background-color: #f2f2f2; /* Color de fondo gris claro */
+  padding: 20px;
+  border-radius: 5px;
+}
+
+
+/* Estilo para el pie de página */
+.footer {
+  background-color: lightblue;
+  color: #fff;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+
+/* Estilo para los botones */
+.button-min {
+  display: inline-block;
+  background-color: lightblue;
+  color: #fff;
+  padding: 5px 10px;
+  text-decoration: none;
+  border: none;
+  border-radius: 1px;
+  transition: background-color 0.3s;
+  margin: 5px; /* Añade un margen entre los botones */
+}
+
+.button-min:hover {
+  background-color: #45a049;
+}
+
+/* Estilo para los botones personalizados */
+.custom-button-min {
+  /* Agrega aquí los estilos específicos para los botones en tu script.js */
+  /* Por ejemplo: */
+  background-color: #ff0000;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-size: 16px;
+  margin: 5px;
+}
+
+.custom-button-min:hover {
+  /* Estilo para el estado hover de los botones personalizados */
+  /* Por ejemplo: */
+  background-color: #990000;
+}
+
+.file-icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.file-name {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.file-list-item-qgis {
+  background-color: #eef7ff;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.file-list-item-default {
+  background-color: #f7f7f7;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+ul {  
+  list-style-type: none;  
+}  
+
+.file-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.qgis-files {
+  flex-basis: 30%;
+}
+
+.default-files {
+  flex-basis: 50%;
+}

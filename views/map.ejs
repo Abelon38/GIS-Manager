@@ -1,0 +1,133 @@
+<!-- *  * Copyright (c) [year] [copyright holder's name]
+ *
+ * This file is licensed under the GNU General Public License (GPL) version 3.
+ * You can obtain a copy of the license at https://www.gnu.org/licenses/gpl-3.0.html#license-text. */
+  -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Map</title>
+  <script src="https://cdn.jsdelivr.net/npm/leaflet/dist/leaflet.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.6.0/proj4.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/proj4leaflet/1.0.2/proj4leaflet.min.js"></script>
+
+
+
+  <style>
+    /* Estilos CSS para el mapa y el diálogo de capas */
+    #map {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    #layerTree {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: white;
+      padding: 10px;
+      border: 1px solid gray;
+      max-height: 200px;
+      overflow-y: auto;
+      z-index: 2;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+    }
+
+    .error-message {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      padding: 20px;
+      border: 1px solid gray;
+      z-index: 3;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="map"></div>
+  <div id="layerTree"></div>
+  <div id="errorMessage" class="error-message" style="display: none;"></div>
+
+  <script>
+    // Obtén el enlace WMS del parámetro de consulta wmsLink
+    const urlParams = new URLSearchParams(window.location.search);
+    const wmsLink = decodeURIComponent(urlParams.get('wmsLink'));
+
+    // Crea el mapa y agrega las capas del servicio WMS
+  const map = L.map('map').setView([59.1351,  18.1115], 10);
+   
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Crea el diálogo de capas
+    const layerTree = L.control.layers(null, null, {
+      collapsed: false
+    }).addTo(map);
+
+    // Obtén el documento Capability del servicio WMS y maneja los errores
+    fetch(wmsLink)
+      .then(response => {
+        if (response.ok) {
+          return response.text();
+        } else {
+          throw new Error(`Error al obtener el documento Capability: ${response.status} ${response.statusText}`);
+        }
+      })
+      .then(xml => {
+        const parser = new DOMParser();
+        const xmlDoc = parser.parseFromString(xml, 'application/xml');
+        const layers = xmlDoc.getElementsByTagName('Layer');
+
+        Array.from(layers).forEach(layer => {
+          const layerName = layer.getElementsByTagName('Name')[0].textContent;
+          const layerTitle = layer.getElementsByTagName('Title')[0].textContent;
+          const wmsLayer = L.tileLayer.wms(wmsLink, {
+            layers: layerName,
+            format: 'image/png',
+            transparent: true,
+            attribution: layerTitle
+          });
+
+          layerTree.addOverlay(wmsLayer, layerTitle);
+          wmsLayer.addTo(map);
+        });
+      })
+      .catch(error => {
+        const errorMessage = document.getElementById('errorMessage');
+        errorMessage.textContent = error.message;
+        errorMessage.style.display = 'block';
+        console.error(error);
+      });
+
+    // Después de agregar todas las capas al layerTree y al mapa
+    layerTree.addTo(map);
+
+    // Obtén el extent del primer layer agregado al layerTree
+    const firstLayer = Object.values(layerTree._layers)[0].layer;
+    const layerExtent = firstLayer.getBounds();
+
+    // Haz zoom al extent del layer
+    map.fitBounds(layerExtent);
+
+  </script>
+</body>
+
+</html>

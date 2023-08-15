@@ -1,0 +1,51 @@
+<!-- *  * Copyright (c) [year] [copyright holder's name]
+ *
+ * This file is licensed under the GNU General Public License (GPL) version 3.
+ * You can obtain a copy of the license at https://www.gnu.org/licenses/gpl-3.0.html#license-text. */
+  -->
+
+<%- include('./layouts/head'); -%>
+
+<body>
+
+ <%- include('./layouts/header_login'); -%>
+
+<body>
+ 
+  <section class="section">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-one-third" style="margin-top: 10%;">
+          <h1 class="title">Login Page</h1>
+  
+          <form action="/" method="POST">
+            <div class="field">
+              <label class="label">Username</label>
+              <div class="control">
+                <input type="text" id="username" name="username" placeholder="Nombre de usuario" required>
+              </div>
+            </div>
+  
+            <div class="field">
+              <label class="label">Password</label>
+              <div class="control">
+                <input type="password" id="password" name="password" placeholder="Contraseña" required>
+              </div>
+            </div>
+  
+            <div class="field">
+              <div class="control">
+                <button class="button is-primary" type="submit">Login</button>
+              </div>
+            </div>
+          </form>
+  
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <%- include('./layouts/footer'); -%>
+</body>
+
+</html>
