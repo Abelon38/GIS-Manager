@@ -19,5 +19,7 @@ To:
 5. Change the user and password on app.js to yours. As default is 'admin' and 'popelle123' the admin user.
 
 To Install as a service:
+
 6. Open cmd (as administrator) and navigate to where you have GIS-Manager and run node .\service.js to install it as a Windows-service on por 3000. 
+
 7. Enjoy!
