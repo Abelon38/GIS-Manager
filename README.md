@@ -21,6 +21,3 @@ To:
 To Install as a service:
 6. Open cmd (as administrator) and navigate to where you have GIS-Manager and run node .\service.js to install it as a Windows-service on por 3000. 
 7. Enjoy!
-
-
-# GIS-Manager
