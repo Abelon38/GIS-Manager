@@ -1,0 +1,80 @@
+2023-09-01 14:21:16 - Starting C:\Program Files\nodejs\node.exe  --harmony C:\Users\abelg\OneDrive\Dokument\GIS-Manager\node_modules\node-windows\lib\wrapper.js --file C:\Users\abelg\OneDrive\Dokument\GIS-Manager\app.js --scriptoptions= --log "GIS-Manager-1.0 wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2023-09-01 14:21:16 - Started 32612
+2023-09-01 18:36:40 - Stopping gismanager10.exe
+2023-09-01 18:36:40 - ProcessKill 32612
+2023-09-01 18:36:40 - Shutdown exception
+Message:Systemet håller på att avslutas.
+
+Stacktrace:   vid System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInternal(Int32 errorCode, IntPtr errorInfo)
+   vid System.Management.ManagementScope.InitializeGuts(Object o)
+   vid System.Management.ManagementScope.Initialize()
+   vid System.Management.ManagementObjectSearcher.Initialize()
+   vid System.Management.ManagementObjectSearcher.Get()
+   vid winsw.WrapperService.GetChildPids(Int32 pid)
+   vid winsw.WrapperService.StopProcessAndChildren(Int32 pid)
+   vid winsw.WrapperService.StopIt()
+   vid winsw.WrapperService.OnShutdown()
+2023-09-01 18:37:22 - Starting C:\Program Files\nodejs\node.exe  --harmony C:\Users\abelg\OneDrive\Dokument\GIS-Manager\node_modules\node-windows\lib\wrapper.js --file C:\Users\abelg\OneDrive\Dokument\GIS-Manager\app.js --scriptoptions= --log "GIS-Manager-1.0 wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2023-09-01 18:37:23 - Started 7908
+2023-09-05 15:03:37 - Stopping gismanager10.exe
+2023-09-05 15:03:37 - ProcessKill 7908
+2023-09-05 15:03:38 - Shutdown exception
+Message:Systemet håller på att avslutas.
+
+Stacktrace:   vid System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInternal(Int32 errorCode, IntPtr errorInfo)
+   vid System.Management.ManagementScope.InitializeGuts(Object o)
+   vid System.Management.ManagementScope.Initialize()
+   vid System.Management.ManagementObjectSearcher.Initialize()
+   vid System.Management.ManagementObjectSearcher.Get()
+   vid winsw.WrapperService.GetChildPids(Int32 pid)
+   vid winsw.WrapperService.StopProcessAndChildren(Int32 pid)
+   vid winsw.WrapperService.StopIt()
+   vid winsw.WrapperService.OnShutdown()
+2023-09-06 05:55:35 - Starting C:\Program Files\nodejs\node.exe  --harmony C:\Users\abelg\OneDrive\Dokument\GIS-Manager\node_modules\node-windows\lib\wrapper.js --file C:\Users\abelg\OneDrive\Dokument\GIS-Manager\app.js --scriptoptions= --log "GIS-Manager-1.0 wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2023-09-06 05:55:35 - Started 7864
+2023-09-07 20:17:18 - Stopping gismanager10.exe
+2023-09-07 20:17:18 - ProcessKill 7864
+2023-09-07 20:17:18 - Shutdown exception
+Message:Systemet håller på att avslutas.
+
+Stacktrace:   vid System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInternal(Int32 errorCode, IntPtr errorInfo)
+   vid System.Management.ManagementScope.InitializeGuts(Object o)
+   vid System.Management.ManagementScope.Initialize()
+   vid System.Management.ManagementObjectSearcher.Initialize()
+   vid System.Management.ManagementObjectSearcher.Get()
+   vid winsw.WrapperService.GetChildPids(Int32 pid)
+   vid winsw.WrapperService.StopProcessAndChildren(Int32 pid)
+   vid winsw.WrapperService.StopIt()
+   vid winsw.WrapperService.OnShutdown()
+2023-09-07 20:17:59 - Starting C:\Program Files\nodejs\node.exe  --harmony C:\Users\abelg\OneDrive\Dokument\GIS-Manager\node_modules\node-windows\lib\wrapper.js --file C:\Users\abelg\OneDrive\Dokument\GIS-Manager\app.js --scriptoptions= --log "GIS-Manager-1.0 wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2023-09-07 20:17:59 - Started 7428
+2023-09-08 06:20:50 - Stopping gismanager10.exe
+2023-09-08 06:20:50 - ProcessKill 7428
+2023-09-08 06:20:51 - Shutdown exception
+Message:Systemet håller på att avslutas.
+
+Stacktrace:   vid System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInternal(Int32 errorCode, IntPtr errorInfo)
+   vid System.Management.ManagementScope.InitializeGuts(Object o)
+   vid System.Management.ManagementScope.Initialize()
+   vid System.Management.ManagementObjectSearcher.Initialize()
+   vid System.Management.ManagementObjectSearcher.Get()
+   vid winsw.WrapperService.GetChildPids(Int32 pid)
+   vid winsw.WrapperService.StopProcessAndChildren(Int32 pid)
+   vid winsw.WrapperService.StopIt()
+   vid winsw.WrapperService.OnShutdown()
+2023-09-08 06:21:30 - Starting C:\Program Files\nodejs\node.exe  --harmony C:\Users\abelg\OneDrive\Dokument\GIS-Manager\node_modules\node-windows\lib\wrapper.js --file C:\Users\abelg\OneDrive\Dokument\GIS-Manager\app.js --scriptoptions= --log "GIS-Manager-1.0 wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2023-09-08 06:21:30 - Started 7668
+2023-09-08 09:28:23 - Stopping gismanager10.exe
+2023-09-08 09:28:23 - ProcessKill 7668
+2023-09-08 09:28:23 - Found child process: 7784 Name: conhost.exe
+2023-09-08 09:28:23 - Found child process: 5840 Name: node.exe
+2023-09-08 09:28:23 - Stopping process 7784
+2023-09-08 09:28:23 - Send SIGINT 7784
+2023-09-08 09:28:23 - SIGINT to 7784 failed - Killing as fallback
+2023-09-08 09:28:23 - Stopping process 5840
+2023-09-08 09:28:23 - Send SIGINT 5840
+2023-09-08 09:28:23 - SIGINT to 5840 failed - Killing as fallback
+2023-09-08 09:28:23 - Stopping process 7668
+2023-09-08 09:28:23 - Send SIGINT 7668
+2023-09-08 09:28:23 - SIGINT to 7668 failed - Killing as fallback
+2023-09-08 09:28:23 - Finished gismanager10.exe

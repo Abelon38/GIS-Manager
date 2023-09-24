@@ -1,0 +1,11 @@
+Error: ENOENT: no such file or directory, scandir 'C:\Users\abelg\OneDrive\Dokument\GIS-Manager\qgisprojekt'
+    at Object.readdirSync (fs.js:1048:3)
+    at C:\Users\abelg\OneDrive\Dokument\GIS-Manager\routes\qgis.js:21:26
+    at Layer.handle [as handle_request] (C:\Users\abelg\OneDrive\Dokument\GIS-Manager\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\abelg\OneDrive\Dokument\GIS-Manager\node_modules\express\lib\router\route.js:144:13)
+    at module.exports (C:\Users\abelg\OneDrive\Dokument\GIS-Manager\auth\isAuthenticated.js:9:14)
+    at Layer.handle [as handle_request] (C:\Users\abelg\OneDrive\Dokument\GIS-Manager\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\abelg\OneDrive\Dokument\GIS-Manager\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\abelg\OneDrive\Dokument\GIS-Manager\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\abelg\OneDrive\Dokument\GIS-Manager\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\abelg\OneDrive\Dokument\GIS-Manager\node_modules\express\lib\router\index.js:284:15

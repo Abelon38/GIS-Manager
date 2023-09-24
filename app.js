@@ -3,7 +3,6 @@
  * This file is licensed under the GNU General Public License (GPL) version 3.
  * You can obtain a copy of the license at https://www.gnu.org/licenses/gpl-3.0.html#license-text. */
 
-
 const express = require('express');
 const multer = require('multer');
 const fs = require('fs');
@@ -64,7 +63,7 @@ app.get('/logout', (req, res) => {
 });
 
 const users = [
-  { username: 'admin', password: bcrypt.hashSync('popelle123', 10) },
+  { username: 'admin', password: bcrypt.hashSync('admin', 4) },
   { username: 'usuario2', password: bcrypt.hashSync('contraseña2', 10) },
   // Add more users if necessary
 ];

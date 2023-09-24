@@ -14,9 +14,19 @@
         <div class="container" style="margin-top: 5%;">
           <section class="section">
             <div class="columns is-centered">
+              <div class="column">
+                <label class="subtitle" for="uploadForm">Change path to geodata</label>
+                <br>
+                <br>
+                <form action="/guardar-geodata" method="post">
+                  <label for="direccion">Address:</label>
+                  <input type="text" id="direccion" name="direccion">
+                  <button type="submit">Save changes</button>
+                </form>
+              </div>
 
               <div class="column">
-                <label class="subtitle" for="uploadForm">Upload your data</label>
+                <label class="subtitle" for="uploadForm">Upload geodata</label>
                 <br>
                 <br>
                 <form id="uploadForm" action="/api/geodata" method="post" enctype="multipart/form-data">
